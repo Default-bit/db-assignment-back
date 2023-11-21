@@ -4,4 +4,3 @@ pydantic
 SQLAlchemy
 uvicorn
 asyncpg
-pydantic[email]
