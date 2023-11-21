@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: fastapi
+    runtime: docker
+    plan: free
+    repo: https://github.com/Default-bit/db-assignment-back.git
+    region: frankfurt
+    branch: main
+    envVars:
+      - key: DATABASE_URL
+        sync: false

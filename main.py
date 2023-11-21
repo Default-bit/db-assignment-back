@@ -8,6 +8,7 @@ from datetime import date
 from datetime import time
 from pydantic import BaseModel, Field
 from typing import Optional
+import os
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -22,7 +23,7 @@ app.add_middleware(
 )
 
 
-DATABASE_URL = 'postgresql://postgres:mysecretpassword@localhost/dbassignment'
+DATABASE_URL = os.environ.get("DATABASE_URL")
 database = databases.Database(DATABASE_URL)
 
 metadata = sqlalchemy.MetaData()
