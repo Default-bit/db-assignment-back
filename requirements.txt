@@ -1,0 +1,5 @@
+databases
+fastapi
+pydantic
+SQLAlchemy
+uvicorn
